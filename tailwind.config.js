@@ -12,6 +12,10 @@ module.exports = {
       },
       textColor: {
         "Company-text": "#008AF2",
+        "income-text": "#5787F4",
+        "expense-text": "#FB77A4",
+        "balance-text": "#B4DEA6",
+        "transaction-text": "#34D3EB",
       },
     },
   },
