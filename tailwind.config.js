@@ -9,6 +9,7 @@ module.exports = {
         "tracker-color": "#F7F7F7",
         "button-color": "#5B88F7",
         "5000-bg": "#F9F9F9",
+        Dbcolor: "#EEF5F7",
       },
       textColor: {
         "Company-text": "#008AF2",

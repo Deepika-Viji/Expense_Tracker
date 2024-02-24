@@ -1,5 +1,5 @@
 import React from "react";
-
+import { AiOutlineWallet } from "react-icons/ai";
 const Sidebar = () => {
   return (
     <div className="bg-#FFFFFF h-screen">
@@ -10,17 +10,20 @@ const Sidebar = () => {
       </div>
       <div className="flex flex-col items-center justify-center py-[30px]">
         <img
-          src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
-          alt="Profile image"
-          className="rounded-full h-24 w-24 overflow-hidden"
+          src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?cs=srgb&dl=pexels-linkedin-sales-navigator-2182970.jpg&fm=jpg"
+          alt="Profile_image"
+          className="rounded-full h-24 w-24 object-coveroverflow-hidden"
         />
       </div>
       <div className="py-[5px] flex flex-col items-center justify-center">
         <p>Nicholas Delacruz</p>
       </div>
-      <div className="py-[5px] flex flex-col items-center justify-center bg-5000-bg ">
-        <p className="border border-gray-400  p-2 pb-0 text-center rounded-lg">
-          5000
+      <div className="py-[5px] flex flex-col items-center justify-center  ">
+        <p className="border  border-gray-400 w-36 h-9  text-center rounded-lg">
+          <div className="flex flex-row justify-center gap-2 p-1">
+            <AiOutlineWallet size={23} />
+            5000
+          </div>
         </p>
       </div>
       <div className="py-[15px]">
