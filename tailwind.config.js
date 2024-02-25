@@ -10,6 +10,8 @@ module.exports = {
         "button-color": "#5B88F7",
         "5000-bg": "#F9F9F9",
         Dbcolor: "#EEF5F7",
+        button: "#4676F9",
+        bg_table: "#F9F9F9",
       },
       textColor: {
         "Company-text": "#008AF2",

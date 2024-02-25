@@ -10,7 +10,7 @@ const TimeField = () => {
         type="time"
         onChange={onChange}
         value={value}
-        className=" border-b border-gray-400  focus:outline-none"
+        className=" border-b w-32 border-gray-400 border- focus:outline-none"
       />
     </div>
   );

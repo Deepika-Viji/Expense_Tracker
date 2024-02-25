@@ -7,7 +7,7 @@ const Datefield = () => {
       <input
         type="date"
         onChange={(date) => setStartDate(date)}
-        className="border-b border-gray-400  focus:outline-none"
+        className="border-b border-gray-400 b-32 focus:outline-none"
       />
     </div>
   );
