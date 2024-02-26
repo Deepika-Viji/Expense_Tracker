@@ -33,9 +33,9 @@ const Sidebar = () => {
   }, [history]);
 
   return (
-    <div className="bg-bgblack h-screen  shadow-lg border border-r-white">
-      <div className="px-[15px] py-[30px] flex items-center justify-center border-b-[1px] bg-bgblack">
-        <h1 className="text-textwhite text-[20px] font-extrabold cursor-pointer">
+    <div className="   ">
+      <div className="px-[15px] py-[30px] flex items-center justify-center border-b-[1px] ">
+        <h1 className="text-text_darkgreen text-[20px] font-extrabold cursor-pointer">
           Expense Tracker
         </h1>
       </div>
@@ -46,10 +46,10 @@ const Sidebar = () => {
           className="rounded-full h-24 w-24 object-cover overflow-hidden"
         />
       </div>
-      <div className="py-[5px] flex flex-col items-center justify-center text-textwhite">
+      <div className="py-[5px] flex flex-col items-center justify-center text-textblack">
         <p>Nicholas Delacruz</p>
       </div>
-      <div className="py-[5px] flex flex-col items-center justify-center  text-textwhite">
+      <div className="py-[5px] flex flex-col items-center justify-center  text-textblack">
         <p className="border  border-white w-36 h-9  text-center rounded-lg">
           <div className="flex flex-row justify-center gap-2 p-1">
             <AiOutlineWallet size={23} />
@@ -64,9 +64,9 @@ const Sidebar = () => {
         <button
           className={`rounded-lg ${
             activeButton === "Dashboard"
-              ? "bg-bggreen text-textblack"
-              : "bg-side-color text-[#000]"
-          } px-4 py-1 flex items-center justify-center w-40`}
+              ? "bg-bg_green text-text_darkgreen"
+              : "bg-side-color text-text_darkgreen"
+          } px-4 py-1 flex items-center justify-center w-52`}
           onClick={() => handleButtonClick("Dashboard")}
         >
           Dashboard
@@ -76,9 +76,9 @@ const Sidebar = () => {
         <button
           className={`rounded-lg ${
             activeButton === "Transaction"
-              ? "bg-bggreen text-textblack"
-              : "bg-side-color text-[#000]"
-          } px-4 py-1 flex items-center justify-center w-40`}
+              ? "bg-bg_green text-text_darkgreen"
+              : "bg-side-color text-text_darkgreen"
+          } px-4 py-1 flex items-center justify-center w-52`}
           onClick={() => handleButtonClick("Transaction")}
         >
           Transaction
@@ -87,7 +87,7 @@ const Sidebar = () => {
 
       <div className="py-[20px] flex flex-col items-center justify-center">
         <button
-          className={`rounded-lg border border-white text-textwhite px-4 py-1 flex items-center justify-center w-40 hover:bg-red-600 hover:text-textblack`}
+          className={`rounded-lg border  border-white text-red-600 px-4 py-1 flex items-center justify-center w-52 hover:bg-red-600 hover:text-white`}
           onClick={handleLogout}
         >
           Logout

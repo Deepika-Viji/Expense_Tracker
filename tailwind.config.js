@@ -16,6 +16,8 @@ module.exports = {
         bgblack: "#0A0A0A",
         bggreen: "#9FFB64",
         bgwhite: "#FFFFFF",
+        bg_green: "#DBF698",
+        bg_darkgreen: "#171A13",
       },
       textColor: {
         "Company-text": "#008AF2",
@@ -26,6 +28,14 @@ module.exports = {
         textblack: "#0A0A0A",
         textgreen: "#9FFB64",
         textwhite: "#FFFFFF",
+        text_green: "#DBF698",
+        text_darkgreen: "#171A13",
+      },
+      borderColor: {
+        border_green: "#171A13",
+      },
+      shadowColor: {
+        shadow_green: "#171A13",
       },
     },
   },

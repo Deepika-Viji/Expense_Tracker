@@ -43,7 +43,7 @@ const Recent_transaction = () => {
     <div>
       <div className="flex flex-row justify-between">
         <div>
-          <button className="h-8 bg-bggreen text-white w-32 rounded-sm ml-0 mt-4">
+          <button className="h-8 bg-bg_green text-textblack w-36 rounded-sm ml-0 mt-4">
             Add Transaction
           </button>
         </div>
@@ -52,9 +52,9 @@ const Recent_transaction = () => {
             onClick={handleDelete}
             className={`${
               isDeleteDisabled
-                ? "text-gray-300 cursor-not-allowed"
-                : "text-red-600 cursor-pointer"
-            } text-white px-4 py-2 rounded`}
+                ? "text-red-600 cursor-not-allowed"
+                : "text-white bg-red-600 cursor-pointer"
+            } px-4 py-2 rounded`}
             disabled={isDeleteDisabled}
           >
             Delete
@@ -62,29 +62,29 @@ const Recent_transaction = () => {
         </div>
       </div>
 
-      <table className="table-auto min-w-full rounded border-l border-r border-b border-l-white border-r-white border-b-white">
-        <thead>
+      <table className="table-auto min-w-full rounded border border-black mt-3">
+        <thead className="border border-black">
           <tr>
-            <th className="border-t bg-bgblack border-white text-left  px-4 py-2">
+            <th className="border-t bg-bg_green border-black text-left  px-4 py-2">
               <input
                 type="checkbox"
                 checked={selectAll}
                 onChange={handleSelectAllChange}
               />
             </th>
-            <th className="border-t bg-bgblack border-white text-left text-white px-4 py-2">
+            <th className="border-t bg-bg_green border-black text-left text-textblack px-4 py-2">
               Category
             </th>
-            <th className="border-t bg-bgblack border-white text-left text-white px-4 py-2">
+            <th className="border-t bg-bg_green border-black text-left text-textblack px-4 py-2">
               Date
             </th>
-            <th className="border-t bg-bgblack border-white text-left text-white px-4 py-2">
+            <th className="border-t bg-bg_green border-black text-left text-textblack px-4 py-2">
               Payment Mode
             </th>
-            <th className="border-t bg-bgblack px-4 py-2 text-white text-left">
+            <th className="border-t bg-bg_green px-4 py-2 border-black text-textblack text-left">
               Description
             </th>
-            <th className="border-t bg-bgblack px-4 py-2 text-white text-left">
+            <th className="border-t bg-bg_green px-4 py-2 border-black text-textblack text-left">
               Amount
             </th>
           </tr>
@@ -92,26 +92,28 @@ const Recent_transaction = () => {
         <tbody>
           {data.map((item, index) => (
             <tr key={index}>
-              <td className="border-t border-white text-white px-4 py-2">
+              <td className="border-t border-black text-textblack px-4 py-2">
                 <input
                   type="checkbox"
                   checked={selectedRows.includes(index)}
                   onChange={() => handleCheckboxChange(index)}
                 />
               </td>
-              <td className="border-t border-white px-4 text-white py-2">
+              <td className="border-t border-black px-4 text-textblack py-2">
                 {item.category}
               </td>
-              <td className="border-t border-white text-white px-4 py-2">
+              <td className="border-t border-black text-textblack px-4 py-2">
                 {item.date}
               </td>
-              <td className="border-t border-white text-white px-4 py-2">
+              <td className="border-t border-black text-textblack px-4 py-2">
                 {item.paymentMode}
               </td>
-              <td className="border-t px-4 text-white py-2">
+              <td className="border-t border-black px-4 text-textblack py-2">
                 {item.description}
               </td>
-              <td className="border-t px-4 text-white py-2">₹ {item.amount}</td>
+              <td className="border-t px-4 border-black text-textblack py-2">
+                ₹ {item.amount}
+              </td>
             </tr>
           ))}
         </tbody>
