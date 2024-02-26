@@ -53,7 +53,7 @@ const Dashboard = () => {
         <Sidebar />
       </div>
       <div className="basis-[70%] flex flex-col h-screen ">
-        <div className="mt-5 ml-3">All transactions</div>
+        <div className="mt-5 ml-5">All transactions</div>
 
         <div className="w-[1100px] ml-5">
           <div>

@@ -43,11 +43,11 @@ const Recent_transaction = () => {
     <div>
       <div className="flex flex-row justify-between">
         <div>
-          <button className="h-8 bg-button text-white w-32 rounded-sm ml-0">
+          <button className="h-8 bg-button text-white w-32 rounded-sm ml-0 mt-4">
             Add Transaction
           </button>
         </div>
-        <div className="flex flex-row  mr-5 h-10 font-medium">
+        <div className="flex flex-row  mr-5 h-10 mt-4 font-medium">
           <button
             onClick={handleDelete}
             className={`${
