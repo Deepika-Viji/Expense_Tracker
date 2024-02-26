@@ -12,6 +12,7 @@ module.exports = {
         Dbcolor: "#EEF5F7",
         button: "#4676F9",
         bg_table: "#F9F9F9",
+        filter: "#EDEDED",
       },
       textColor: {
         "Company-text": "#008AF2",
