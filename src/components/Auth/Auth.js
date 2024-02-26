@@ -21,7 +21,7 @@ const Auth = () => {
   };
 
   const handleEmailChange = (e) => {
-    setEmail(e.target.value); //
+    setEmail(e.target.value); //setEmail gives all the data. If we want the particular data then use target.value
   };
 
   const toggleForm = (e) => {
@@ -31,20 +31,20 @@ const Auth = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); //inorder to prevent unwanted reload after clicking the buttons
+    e.preventDefault(); //inorder to prevent unwanted reload after clicking the buttons ex: GIVE WRONG ID AND PWD SUBMIT -> ALL DATAS WILL BE VANISHED SO NO VALIDATION OCCURS AND NO ERROR MSG
     setError(null); //use state-> Setting the error initially as null. Because there may be some error which occures previously
     try {
       if (isLoginForm) {
         await signInWithEmailAndPassword(auth, email, password);
         toast.success("Login Successfully");
         setTimeout(() => {
-          history.push("/Dashboard");
+          history.push("/dashboard");
         }, 3000);
       } else {
         await createUserWithEmailAndPassword(auth, email, password);
         toast.success("Signup Successfully");
         setTimeout(() => {
-          history.push("/Dashboard");
+          history.push("/dashboard");
         }, 3000);
       }
     } catch (error) {
@@ -55,16 +55,14 @@ const Auth = () => {
   const handleForgotPassword = () => {
     if (email.trim() === "") {
       toast.error("Please enter your email.");
-      console.log("Email is not present. Please enter your email.");
     } else {
       // Use Firebase function to send password reset email
       sendPasswordResetEmail(auth, email)
         .then(() => {
-          toast.success("OTP sended successfully!");
-          console.log("Password reset email sent successfully.");
+          toast.success("Password reset email sent successfully.");
         })
         .catch((error) => {
-          console.error("Error sending password reset email:", error.message);
+          toast.error(error.message);
         });
     }
   };
@@ -72,11 +70,7 @@ const Auth = () => {
   return (
     <div className="flex items-center justify-center h-screen bg-[#EEF5F7] ">
       <Toaster toastOptions={{ duration: 4000 }} />
-      <div
-        className={`bg-white w-1/2 rounded-3xl shadow-2xl flex transform transition-transform duration-500 ${
-          isLoginForm ? "" : "rotate-y-180"
-        }`}
-      >
+      <div className="bg-white w-1/2 rounded-3xl shadow-2xl flex">
         {/* Left Side - Login Details */}
         <div className="w-1/2 pr-8 p-8">
           <h2 className="text-2xl font-semibold mb-4">

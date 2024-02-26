@@ -33,9 +33,9 @@ const Sidebar = () => {
   }, [history]);
 
   return (
-    <div className="bg-#FFFFFF h-screen shadow-lg">
-      <div className="px-[15px] py-[30px] flex items-center justify-center border-b-[1px] bg-tracker-color">
-        <h1 className="text-Company-text text-[20px] font-extrabold cursor-pointer">
+    <div className="bg-bgblack h-screen  shadow-lg border border-r-white">
+      <div className="px-[15px] py-[30px] flex items-center justify-center border-b-[1px] bg-bgblack">
+        <h1 className="text-textwhite text-[20px] font-extrabold cursor-pointer">
           Expense Tracker
         </h1>
       </div>
@@ -46,11 +46,11 @@ const Sidebar = () => {
           className="rounded-full h-24 w-24 object-cover overflow-hidden"
         />
       </div>
-      <div className="py-[5px] flex flex-col items-center justify-center">
+      <div className="py-[5px] flex flex-col items-center justify-center text-textwhite">
         <p>Nicholas Delacruz</p>
       </div>
-      <div className="py-[5px] flex flex-col items-center justify-center  ">
-        <p className="border  border-gray-400 w-36 h-9  text-center rounded-lg">
+      <div className="py-[5px] flex flex-col items-center justify-center  text-textwhite">
+        <p className="border  border-white w-36 h-9  text-center rounded-lg">
           <div className="flex flex-row justify-center gap-2 p-1">
             <AiOutlineWallet size={23} />
             5000
@@ -58,13 +58,13 @@ const Sidebar = () => {
         </p>
       </div>
       <div className="py-[15px]">
-        <div className="w-full h-px bg-gray-300"></div>
+        <div className="w-full h-px bg-white"></div>
       </div>
       <div className="py-[5px] flex flex-col items-center justify-center">
         <button
-          className={`rounded-full ${
+          className={`rounded-lg ${
             activeButton === "Dashboard"
-              ? "bg-button-color text-white"
+              ? "bg-bggreen text-textblack"
               : "bg-side-color text-[#000]"
           } px-4 py-1 flex items-center justify-center w-40`}
           onClick={() => handleButtonClick("Dashboard")}
@@ -74,9 +74,9 @@ const Sidebar = () => {
       </div>
       <div className="py-[30px] flex flex-col items-center justify-center">
         <button
-          className={`rounded-full ${
+          className={`rounded-lg ${
             activeButton === "Transaction"
-              ? "bg-button-color text-white"
+              ? "bg-bggreen text-textblack"
               : "bg-side-color text-[#000]"
           } px-4 py-1 flex items-center justify-center w-40`}
           onClick={() => handleButtonClick("Transaction")}
@@ -87,7 +87,7 @@ const Sidebar = () => {
 
       <div className="py-[20px] flex flex-col items-center justify-center">
         <button
-          className={`rounded-full text-red-500 px-4 py-1 flex items-center justify-center w-40 hover:bg-red-600 hover:text-[#fff]`}
+          className={`rounded-lg border border-white text-textwhite px-4 py-1 flex items-center justify-center w-40 hover:bg-red-600 hover:text-textblack`}
           onClick={handleLogout}
         >
           Logout

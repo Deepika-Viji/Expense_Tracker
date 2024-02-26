@@ -48,12 +48,14 @@ import { MdDelete } from "react-icons/md";
 
 const Dashboard = () => {
   return (
-    <div className="flex bg-Dbcolor">
+    <div className="flex bg-bgblack">
       <div className="w-[15%] shadow-black h-px border-r border-y-white">
         <Sidebar />
       </div>
       <div className="basis-[70%] flex flex-col h-screen ">
-        <div className="mt-5 ml-5">All transactions</div>
+        <div className="mt-5 ml-5 text-textwhite font-semibold">
+          All Transactions
+        </div>
 
         <div className="w-[1100px] ml-5">
           <div>
