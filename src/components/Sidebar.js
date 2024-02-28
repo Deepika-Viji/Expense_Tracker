@@ -3,9 +3,10 @@ import { AiOutlineWallet } from "react-icons/ai";
 import { auth } from "./Firebase/Firebase";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useHistory } from "react-router-dom";
-
+import { useDashboardButton } from "./Stores/Store";
 const Sidebar = () => {
-  const [activeButton, setActiveButton] = useState("Dashboard");
+  // const [activeButton, setActiveButton] = useState("Dashboard");
+  const { activeButton, setActiveButton } = useDashboardButton();
   const history = useHistory();
   const handleButtonClick = (Name) => {
     setActiveButton(Name);
