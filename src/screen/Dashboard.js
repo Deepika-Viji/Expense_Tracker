@@ -4,9 +4,8 @@ import Recent_transaction from "../components/Recent_transaction";
 import Cards from "../components/Cards";
 import Dashboard_top from "../components/Dashboard_top";
 import Donutchart from "./../components/Donutchart";
-import Linechart from "./../components/Linechart";
-import Barchart from "../components/Barchart";
 import { useDashboardButton } from "../components/Stores/Store";
+import DashboardTable from "../components/DashboardTable";
 
 const Dashboard = () => {
   const { activeButton } = useDashboardButton();
@@ -24,7 +23,7 @@ const Dashboard = () => {
 export default Dashboard;
 const DashboardClicked = () => {
   return (
-    <div className=" flex">
+    <div className="flex">
       <div className="w-[18%] h-100vh shadow-md shadow-green-950 ">
         <Sidebar />
       </div>
@@ -40,11 +39,8 @@ const DashboardClicked = () => {
             <Donutchart />
           </div>
           <div className="flex flex-row  gap-5 mt-3 mb-3">
-            <div className=" hover:shadow-lg w-[49%] hover:shadow-green-950 rounded-lg">
-              <Linechart />
-            </div>
-            <div className=" hover:shadow-lg w-[49%] hover:shadow-green-950 rounded-lg">
-              <Barchart />
+            <div className=" hover:shadow-lg w-[100%] hover:shadow-green-950 rounded-lg">
+              <DashboardTable />
             </div>
           </div>
         </div>

@@ -378,7 +378,7 @@ const RecentTransaction = () => {
     <div>
       <div className="flex flex-row justify-between mr-5 h-10 font-medium items-center">
         <div>
-          <button className="border bg-button-color rounded-md px-2  text-white py-1 justify-center ml-2 ">
+          <button className="border bg-bg_green rounded-md px-2  text-white py-1 justify-center ml-2 ">
             <AddTransaction />
           </button>
         </div>
